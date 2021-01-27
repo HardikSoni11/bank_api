@@ -8,7 +8,7 @@ with open('{}.json'.format(file_name)) as json_data:
     d = json.load(json_data)    
     for item in d:
         c+=1
-        if(c==30000): break
+        if(c==50000): break
         pk+=1
         item = {"model": "api.BankDetail", "pk": pk, "fields": item}
         new_list.append(item)

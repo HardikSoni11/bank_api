@@ -26,7 +26,7 @@ SECRET_KEY = 'y+b0rqu^7!cyms9*npiby^outl-v%-7e@#!@txyg(k2$0fflr('
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     #3rd party
     'rest_framework',
+    'corsheaders',
 
     #local
     'api',
@@ -53,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'bank_api.urls'
